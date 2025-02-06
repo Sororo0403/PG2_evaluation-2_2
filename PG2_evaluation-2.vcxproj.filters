@@ -14,6 +14,15 @@
     <Filter Include="KamataEngine\Adapter">
       <UniqueIdentifier>{c6468eb4-788b-4a83-b207-a5f4804e56c5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="PG2_evaluation-2">
+      <UniqueIdentifier>{01b5fd4a-4f72-4819-b3ff-2639315747e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PG2_evaluation-2\Include">
+      <UniqueIdentifier>{0e6646e1-2dc7-441c-8d02-f0d2a8224a38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PG2_evaluation-2\Source">
+      <UniqueIdentifier>{f390ef28-2499-4886-bdd4-1964d2c995bc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\DirectXCommon.cpp">
@@ -37,6 +46,9 @@
     </ClCompile>
     <ClCompile Include="C:\KamataEngine\DirectXGame\base\StringUtility.cpp">
       <Filter>KamataEngine\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>PG2_evaluation-2\Source</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +132,12 @@
     </ClInclude>
     <ClInclude Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.h">
       <Filter>KamataEngine\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>PG2_evaluation-2\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="MyVector2.h">
+      <Filter>PG2_evaluation-2\Include</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
