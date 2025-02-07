@@ -361,3 +361,9 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/inputManager.h
+/inputManager.cpp
+/inputManager.h
+/inputManager.cpp
+/inputManager.cpp
+/inputManager.h
