@@ -47,10 +47,10 @@
     <ClCompile Include="GameObject.cpp">
       <Filter>PG2_evaluation-2\Source</Filter>
     </ClCompile>
-    <ClCompile Include="InputManager.cpp">
+    <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp">
       <Filter>KamataEngine</Filter>
     </ClCompile>
-    <ClCompile Include="C:\KamataEngine\DirectXGame\2d\ImGuiManager.cpp">
+    <ClCompile Include="InputManager.cpp">
       <Filter>PG2_evaluation-2\Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -143,9 +143,6 @@
       <Filter>PG2_evaluation-2\Include</Filter>
     </ClInclude>
     <ClInclude Include="InputManager.h">
-      <Filter>PG2_evaluation-2\Include</Filter>
-    </ClInclude>
-    <ClInclude Include="Direciton.h">
       <Filter>PG2_evaluation-2\Include</Filter>
     </ClInclude>
   </ItemGroup>
