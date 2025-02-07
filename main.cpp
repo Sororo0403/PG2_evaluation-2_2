@@ -1,20 +1,27 @@
 #include <Novice.h>
+#include "InputManager.h"
 
 // タイトル
 const char kWindowTitle[] = "LC1B_18_ハタナカタロウ_";
+
+// ウィンドウサイズ
+const int kWindowWidth = 1280;
+const int kWindowHeight = 720;
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// ライブラリの初期化
 	Novice::Initialize(
 		kWindowTitle,
-		static_cast<int>(kWindowSize.x),
-		static_cast<int>(kWindowSize.y)
+		static_cast<int>(kWindowWidth),
+		static_cast<int>(kWindowHeight)
 	);
+
+	// 入力管理
+	InputManager &input = InputManager::GetInstance();
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
-
 		// フレームの開始
 		Novice::BeginFrame();
 
@@ -22,10 +29,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓更新処理ここから
 		///
 
-		/*=========================
-		の更新処理
-		=========================*/
-
+		// 入力管理
+		input.Update();
 
 		///
 		/// ↑更新処理ここまで
@@ -35,9 +40,6 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓描画処理ここから
 		///
 
-		/*=========================
-		の描画処理
-		=========================*/
 
 
 		///
@@ -48,7 +50,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		Novice::EndFrame();
 
 		// ESCキーが押されたらループを抜ける
-		if (preKeys[DIK_ESCAPE] == 0 && keys[DIK_ESCAPE] != 0) {
+		if (input.WasKeyTriggered(DIK_ESCAPE)) {
 			break;
 		}
 	}
