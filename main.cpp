@@ -1,24 +1,7 @@
 #include <Novice.h>
 
-/*=========================
-構造体
-=========================*/
-/// <summary>
-/// 2次元ベクトル
-/// </summary>
-struct Vector2 {
-	float x;
-	float y;
-};
-
-/*=========================
-グローバル変数
-=========================*/
 // タイトル
 const char kWindowTitle[] = "LC1B_18_ハタナカタロウ_";
-
-// ウィンドウサイズ
-const Vector2 kWindowSize = { 1280.0f,720.0f };
 
 // Windowsアプリでのエントリーポイント(main関数)
 int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
