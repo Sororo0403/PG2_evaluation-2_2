@@ -1,13 +1,13 @@
 ﻿#pragma once
 
-#include "Scene.h"
+#include "GameObject.h"
 
-class TitleScene: public Scene {
+class Player : public GameObject{
 public:
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
-	TitleScene();
+	Player();
 
 	/// <summary>
 	/// 更新処理
@@ -20,5 +20,11 @@ public:
 	void Draw() const override;
 
 private:
+	// メンバ変数
+	float moveSpeed_;
 
+	/// <summary>
+	/// キーによる移動
+	/// </summary>
+	void KeyMove();
 };

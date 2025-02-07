@@ -1,6 +1,8 @@
 #include <Novice.h>
+#include <memory>
 #include "InputManager.h"
 #include "SceneManager.h"
+#include "TitleScene.h"
 
 // タイトル
 const char kWindowTitle[] = "LC1B_18_ハタナカタロウ_";
@@ -23,7 +25,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 
 	// シーン管理
 	SceneManager &sceneManager = SceneManager::GetInstance();
-	sceneManager.SetScene();
+	sceneManager.SetScene(std::make_unique<TitleScene>());
 
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
