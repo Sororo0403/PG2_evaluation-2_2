@@ -50,28 +50,22 @@ void Player::KeyMove() {
 	// 入力管理のインスタンスを取得
 	InputManager &input = InputManager::GetInstance();
 
-	// 移動ベクトル
-	MyVector2<float> moveVec = { 0.0f, 0.0f };
-
 	// キー入力に応じて移動ベクトルを更新
 	if (input.IsKeyPressed(DIK_W)) {
-		moveVec.y -= 1.0f;
+		pos_.y -= moveSpeed_;
 	}
+
 	if (input.IsKeyPressed(DIK_A)) {
-		moveVec.x -= 1.0f;
+		pos_.x -= moveSpeed_;
 	}
+
 	if (input.IsKeyPressed(DIK_S)) {
-		moveVec.y += 1.0f;
+		pos_.y += moveSpeed_;
 	}
+
 	if (input.IsKeyPressed(DIK_D)) {
-		moveVec.x += 1.0f;
+		pos_.x += moveSpeed_;
 	}
-
-	// 正規化
-	moveVec.Normalized();
-
-	// 移動
-	pos_ += moveVec * moveSpeed_;
 }
 
 void Player::ShootBullet() {
