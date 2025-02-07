@@ -29,22 +29,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		static_cast<int>(kWindowSize.y)
 	);
 
-	/*=========================
-	変数
-	=========================*/
-	// キー入力結果を受け取る箱
-	char keys[256] = { 0 };
-	char preKeys[256] = { 0 };
-
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
 
 		// フレームの開始
 		Novice::BeginFrame();
-
-		// キー入力を受け取る
-		memcpy(preKeys, keys, 256);
-		Novice::GetHitKeyStateAll(keys);
 
 		///
 		/// ↓更新処理ここから
