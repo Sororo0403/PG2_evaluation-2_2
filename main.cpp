@@ -5,7 +5,7 @@
 #include "TitleScene.h"
 
 // タイトル
-const char kWindowTitle[] = "LC1B_18_ハタナカタロウ_";
+const char kWindowTitle[] = "LC1B_18_ハタナカタロウ_PG2_Evaluation-2";
 
 // ウィンドウサイズ
 const int kWindowWidth = 1280;
