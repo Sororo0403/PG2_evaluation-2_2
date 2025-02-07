@@ -46,6 +46,24 @@ void Player::Draw() const {
 	}
 }
 
+std::vector<std::unique_ptr<Bullet>>::const_iterator Player::BulletsBegin() const {
+	return bullets_.begin();
+}
+
+std::vector<std::unique_ptr<Bullet>>::const_iterator Player::BulletsEnd() const {
+	return bullets_.end();
+}
+
+std::vector<std::unique_ptr<Bullet>>::iterator Player::RemoveBullet(std::vector<std::unique_ptr<Bullet>>::const_iterator bullet) {
+	for (auto it = bullets_.begin(); it != bullets_.end(); ++it) {
+		if (it == bullet) {
+			return bullets_.erase(it);
+		}
+	}
+
+	return bullets_.end();
+}
+
 void Player::KeyMove() {
 	// 入力管理のインスタンスを取得
 	InputManager &input = InputManager::GetInstance();
@@ -75,7 +93,7 @@ void Player::ShootBullet() {
 	// スペースキーで弾丸を発射
 	if (input.IsKeyPressed(DIK_SPACE)) {
 		if (shootTimer_->IsTimeUp()) {
-			bullets_.push_back(std::make_unique<Bullet>(pos_, PLAYER));
+			bullets_.push_back(std::make_unique<Bullet>(pos_));
 			shootTimer_->ReStart();
 		}
 	}
@@ -107,7 +125,18 @@ void Player::UpdateBulletsStates() {
 	ShootBullet();
 
 	// 弾丸の更新
-	for (auto &bullet : bullets_) {
+	for (auto it = bullets_.begin(); it != bullets_.end(); ) {
+		// 弾丸を取得
+		auto &bullet = *it;
+
+		// 弾丸の更新
 		bullet->Update();
+
+		// 無効な弾丸を削除
+		if (!bullet->IsActive()) {
+			it = bullets_.erase(it);
+		} else {
+			++it;
+		}
 	}
 }

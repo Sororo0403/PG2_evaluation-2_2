@@ -20,4 +20,5 @@ void TitleScene::Update() {
 }
 
 void TitleScene::Draw() const {
+	Novice::ScreenPrintf(600,340,"SPACE TO START");
 }
