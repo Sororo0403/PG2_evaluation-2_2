@@ -1,15 +1,13 @@
 ﻿#pragma once
 
 #include "GameObject.h"
-#include "MyVector2.h"
 
-class Bullet : public GameObject {
+class Enemy : public GameObject {
 public:
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
-	/// <param name="pos">初期のxy座標</param>
-	Bullet(const MyVector2<float> &pos);
+	Enemy();
 
 	/// <summary>
 	/// 更新処理
@@ -24,9 +22,4 @@ public:
 private:
 	// メンバ変数
 	float moveSpeed_;
-
-	/// <summary>
-	/// 移動処理
-	/// </summary>
-	void Move();
 };

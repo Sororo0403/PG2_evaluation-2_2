@@ -59,6 +59,24 @@
     <ClCompile Include="TitleScene.cpp">
       <Filter>PG2_evaluation-2\Source</Filter>
     </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>PG2_evaluation-2\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>PG2_evaluation-2\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MyGameScene.cpp">
+      <Filter>PG2_evaluation-2\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>PG2_evaluation-2\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>PG2_evaluation-2\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Stopwatch.cpp">
+      <Filter>PG2_evaluation-2\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -158,6 +176,24 @@
       <Filter>PG2_evaluation-2\Include</Filter>
     </ClInclude>
     <ClInclude Include="TitleScene.h">
+      <Filter>PG2_evaluation-2\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>PG2_evaluation-2\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Stopwatch.h">
+      <Filter>PG2_evaluation-2\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>PG2_evaluation-2\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>PG2_evaluation-2\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>PG2_evaluation-2\Include</Filter>
+    </ClInclude>
+    <ClInclude Include="MyGameScene.h">
       <Filter>PG2_evaluation-2\Include</Filter>
     </ClInclude>
   </ItemGroup>
