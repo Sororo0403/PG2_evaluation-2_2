@@ -1,13 +1,15 @@
 ﻿#pragma once
 
+#include <memory>
 #include "Scene.h"
+#include "Player.h"
 
-class TitleScene: public Scene {
+class MyGameScene : public Scene {
 public:
 	/// <summary>
 	/// コンストラクタ
 	/// </summary>
-	TitleScene();
+	MyGameScene();
 
 	/// <summary>
 	/// 更新処理
@@ -20,5 +22,6 @@ public:
 	void Draw() const override;
 
 private:
-
+	// メンバ変数
+	std::unique_ptr<Player> player_;
 };
