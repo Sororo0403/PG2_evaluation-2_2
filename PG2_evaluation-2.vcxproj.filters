@@ -56,6 +56,9 @@
     <ClCompile Include="SceneManager.cpp">
       <Filter>PG2_evaluation-2\Source</Filter>
     </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>PG2_evaluation-2\Source</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\KamataEngine\DirectXGame\audio\Audio.h">
@@ -154,8 +157,8 @@
     <ClInclude Include="SceneManager.h">
       <Filter>PG2_evaluation-2\Include</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include=".editorconfig" />
+    <ClInclude Include="TitleScene.h">
+      <Filter>PG2_evaluation-2\Include</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

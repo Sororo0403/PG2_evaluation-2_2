@@ -1,5 +1,6 @@
 #include <Novice.h>
 #include "InputManager.h"
+#include "SceneManager.h"
 
 // タイトル
 const char kWindowTitle[] = "LC1B_18_ハタナカタロウ_";
@@ -20,6 +21,10 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 	// 入力管理
 	InputManager &input = InputManager::GetInstance();
 
+	// シーン管理
+	SceneManager &sceneManager = SceneManager::GetInstance();
+	sceneManager.SetScene();
+
 	// ウィンドウの×ボタンが押されるまでループ
 	while (Novice::ProcessMessage() == 0) {
 		// フレームの開始
@@ -29,8 +34,11 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓更新処理ここから
 		///
 
-		// 入力管理
+		// 入力管理の更新
 		input.Update();
+
+		// シーン管理の更新
+		sceneManager.Update();
 
 		///
 		/// ↑更新処理ここまで
@@ -40,7 +48,8 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int) {
 		/// ↓描画処理ここから
 		///
 
-
+		// シーン管理の描画
+		sceneManager.Draw();
 
 		///
 		/// ↑描画処理ここまで
